@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FF914D">
+  <meta name="description" content="Trail por una Sonrisa 2026. Una carrera, muchas comunidades y cientos de sonrisas.">
+  <meta property="og:title" content="Trail por una Sonrisa 2026">
+  <meta property="og:description" content="Una carrera, muchas comunidades y cientos de sonrisas.">
+  <meta property="og:type" content="website">
+  <title>Trail por una Sonrisa 2026 | Parchados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#inicio"><span class="brand-mark">🧡</span><span>PARCHADOS <small>BOGOTÁ</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  <nav id="mainNav">
+    <a href="#evento">El evento</a><a href="#actividades">Actividades</a><a href="#comunidades">Comunidades</a>
+    <a href="#transparencia">Transparencia</a><a class="nav-cta" href="#inscripcion">Inscríbete</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <span class="eyebrow">PARCHADOS BOGOTÁ + COMUNIDADES ALIADAS</span>
+    <h1>TRAIL POR<br><em>UNA SONRISA</em></h1>
+    <p class="hero-tagline">Una carrera, muchas comunidades y cientos de sonrisas.</p>
+    <div class="event-pills"><span>📅 Domingo 13 de diciembre de 2026</span><span>📍 Cerros Orientales · Calle 153</span></div>
+    <p class="hero-copy">Una jornada de deporte, naturaleza, integración y solidaridad para llevar alegría a muchos niños esta Navidad.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#inscripcion">INSCRÍBETE AQUÍ</a><a class="btn btn-light" href="#donar">QUIERO DONAR</a></div>
+    <div class="countdown" id="countdown" aria-live="polite">Cargando cuenta regresiva…</div>
+  </div>
+</section>
+
+<section class="section intro" id="evento">
+  <div class="section-heading"><span class="eyebrow orange">UNA CAUSA QUE NOS UNE</span><h2>El deporte también puede <em>regalar sonrisas.</em></h2></div>
+  <p class="lead">Este diciembre queremos unir diferentes comunidades a través del deporte, la naturaleza y la solidaridad.</p>
+  <p>Nos encontraremos en los Cerros Orientales de Bogotá para compartir una jornada de actividad física, bienestar y diversión, mientras trabajamos juntos por una causa especial: llevar alegría a muchos niños esta Navidad.</p>
+  <p>No importa si eres corredor, senderista, amante del baile o simplemente quieres apoyar una buena causa. ¡Todos tenemos un lugar en este encuentro!</p>
+</section>
+
+<section class="section section-tint" id="actividades">
+  <div class="section-heading"><span class="eyebrow orange">MUÉVETE A TU MANERA</span><h2>Una jornada, <em>muchas formas de vivirla.</em></h2></div>
+  <div class="card-grid">
+    <article class="activity-card"><div class="activity-icon">🏃</div><h3>ENTRENAMIENTO TRAIL RUNNING</h3><p>Recorrido deportivo por los senderos de los Cerros Orientales.</p></article>
+    <article class="activity-card"><div class="activity-icon">💃</div><h3>ZUMBA</h3><p>Clase grupal para activar el cuerpo, bailar y compartir antes del entrenamiento.</p></article>
+    <article class="activity-card"><div class="activity-icon">🧘</div><h3>MEDITACIÓN</h3><p>Espacio de relajación y conexión con la naturaleza, simultáneo al entrenamiento.</p></article>
+  </div>
+</section>
+
+<section class="section" id="galeria">
+  <div class="section-heading"><span class="eyebrow orange">ASÍ SE VIVE EL PARCHE</span><h2>Momentos para <em>compartir.</em></h2></div>
+  <div id="galleryGrid" class="gallery-grid"><p class="muted">Pronto compartiremos imágenes del lugar y de nuestras actividades.</p></div>
+  <div id="gifSlider" class="gif-slider" aria-label="Galería de GIF"></div>
+</section>
+
+<section class="section section-dark" id="comunidades">
+  <div class="section-heading"><span class="eyebrow">JUNTOS SOMOS MÁS GRANDES</span><h2>Una iniciativa construida <em>entre comunidades.</em></h2></div>
+  <p class="lead">Comunidades que creen en el deporte, la naturaleza, la integración y la solidaridad.</p>
+  <div id="communityGrid" class="community-grid"><p>Estamos preparando este espacio para nuestras comunidades aliadas.</p></div>
+</section>
+
+<section class="section stats-section" id="transparencia">
+  <div class="section-heading"><span class="eyebrow orange">CUENTAS CLARAS, CORAZONES CONTENTOS</span><h2>La solidaridad también <em>se puede contar.</em></h2></div>
+  <div class="stats-grid">
+    <div class="stat"><strong id="statRegistered">—</strong><span>Inscripciones recibidas</span></div>
+    <div class="stat"><strong id="statConfirmed">—</strong><span>Participantes confirmados</span></div>
+    <div class="stat"><strong id="statCommunities">—</strong><span>Comunidades aliadas</span></div>
+    <div class="stat"><strong id="statMoney">—</strong><span>Dinero recaudado</span></div>
+    <div class="stat"><strong id="statToys">—</strong><span>Juguetes verificados</span></div>
+    <div class="stat"><strong id="statExtra">—</strong><span>Aportes adicionales</span></div>
+  </div>
+  <p class="transparency-note">Las cifras públicas se actualizan con información registrada y verificada por la organización. No publicamos datos personales ni información bancaria.</p>
+</section>
+
+<section class="section registration-section" id="inscripcion">
+  <div class="section-heading"><span class="eyebrow orange">HAZ PARTE DE ESTA HISTORIA</span><h2>Inscríbete a <em>Trail por una Sonrisa.</em></h2></div>
+  <div class="form-intro"><strong>Valor de inscripción: $25.000 COP</strong><p>Completa todos los campos y adjunta tu comprobante. Tu registro quedará recibido cuando el sistema confirme que guardó correctamente la información.</p></div>
+  <form id="registrationForm" class="registration-form">
+    <h3> A. Datos personales</h3>
+    <div class="form-grid">
+      <label>Nombres *<input name="first_name" required maxlength="80" autocomplete="given-name"></label>
+      <label>Apellidos *<input name="last_name" required maxlength="80" autocomplete="family-name"></label>
+      <label>Tipo de documento *<select name="document_type" required><option value="">Selecciona</option><option>Cédula de ciudadanía</option><option>Tarjeta de identidad</option><option>Pasaporte</option><option>Cédula de extranjería</option><option>Otro</option></select></label>
+      <label>Número de documento *<input name="document_number" required maxlength="30" autocomplete="off"></label>
+      <label>Edad *<input name="age" type="number" min="1" max="110" required></label>
+      <label>Celular *<input name="phone" type="tel" required maxlength="25" autocomplete="tel"></label>
+      <label>Correo electrónico *<input name="email" type="email" required maxlength="150" autocomplete="email"></label>
+      <label>Ciudad *<input name="city" required maxlength="80" value="Bogotá"></label>
+    </div>
+    <h3>B. Información de participación</h3>
+    <div class="form-grid">
+      <label>Comunidad a la que perteneces<select name="community_id" id="communitySelect"><option value="">PARCHADOS</option><option value="">PARCEROS RUNNING</option><option value="">STROMRUN</option><option value="">BOGOTA RUNNING</option><option value="">RISEUP</option><option value="">Ninguna / Independiente</option></select></label>
+      <label>Actividad en la que deseas participar *<select name="activity" required><option value="">Selecciona</option><option>Entrenamiento Trail Running</option><option>Meditación</option><option>Zumba y jornada recreativa</option><option>Toda la jornada</option></select></label>
+      <label>¿Cómo te enteraste del evento?<select name="discovery_source"><option value="">Selecciona</option><option>Instagram</option><option>TikTok</option><option>WhatsApp</option><option>Amigos o familiares</option><option>Comunidad aliada</option><option>Otro</option></select></label>
+      <label>Experiencia en deporte o montaña<select name="experience"><option value="">Selecciona</option><option>Ninguna / principiante</option><option>Básica</option><option>Intermedia</option><option>Avanzada</option></select></label>
+    </div>
+    <h3>C. Contacto de emergencia</h3>
+    <div class="form-grid">
+      <label>Nombre del contacto *<input name="emergency_name" required maxlength="120"></label>
+      <label>Celular del contacto *<input name="emergency_phone" type="tel" required maxlength="25"></label>
+      <label>Parentesco o relación *<input name="emergency_relationship" required maxlength="60"></label>
+    </div>
+    <h3>D. Información económica</h3>
+    <div class="form-grid">
+      <label>Valor de inscripción<input value="$25.000 COP" readonly></label>
+      <label>Aporte económico adicional<select name="extra_donation" id="extraDonation"><option value="0">No deseo realizar un aporte adicional</option><option value="5000">$5.000 adicionales</option><option value="10000">$10.000 adicionales</option><option value="other">Otro valor</option></select></label>
+      <label id="otherDonationWrap" class="hidden">Otro valor (COP)<input name="other_donation" id="otherDonation" type="number" min="1000" step="1000"></label>
+    </div>
+    <h3>E. Donación de juguetes</h3>
+    <label>¿Deseas llevar un juguete para donar?<select name="toy_donation"><option value="No">No</option><option value="Sí, juguete nuevo">Sí, juguete nuevo</option><option value="Sí, juguete usado en buen estado">Sí, juguete usado en buen estado</option></select></label>
+    <h3>F. Comprobante de pago <span class="required-label">OBLIGATORIO</span></h3>
+    <p class="help-text">Adjunta una imagen JPG, JPEG o PNG, o un archivo PDF. Tamaño máximo: 5 MB. El archivo se almacenará de forma privada.</p>
+    <label class="file-picker">Seleccionar comprobante *<input id="receipt" name="receipt" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" required><span id="fileName">Ningún archivo seleccionado</span></label>
+    <div id="receiptPreview" class="receipt-preview"></div>
+    <h3>G. Aceptaciones obligatorias</h3>
+    <div class="legal-box">
+      <details><summary>Leer términos y condiciones</summary><p>La inscripción corresponde a la participación en Trail por una Sonrisa 2026, el domingo 13 de diciembre de 2026, en los Cerros Orientales de Bogotá, sector calle 153 hacia el Mirador El Chuscal. El valor de inscripción es de $25.000 COP. La organización podrá comunicar instrucciones logísticas y ajustes necesarios por canales oficiales. El participante se compromete a suministrar información veraz y seguir las indicaciones del equipo organizador.</p></details>
+      <label class="check-row"><input type="checkbox" name="accept_terms" required><span>He leído y acepto los términos y condiciones. *</span></label>
+      <details><summary>Leer autorización de tratamiento de datos personales</summary><p>Autorizo a Parchados Bogotá y a la organización de Trail por una Sonrisa 2026 a recolectar, almacenar y utilizar mis datos para gestionar la inscripción, verificar el pago, coordinar la actividad, atender situaciones logísticas y comunicar información relacionada con el evento, conforme a la Ley 1581 de 2012 y normas reglamentarias. Podré ejercer mis derechos como titular mediante los canales de contacto de la organización.</p></details>
+      <label class="check-row"><input type="checkbox" name="accept_data" required><span>Autorizo el tratamiento de mis datos personales. *</span></label>
+      <details><summary>Leer exoneración de responsabilidad y aceptación de riesgos</summary><p>Declaro que participo voluntariamente y que comprendo que el trail running y las actividades al aire libre implican riesgos inherentes, entre ellos caídas, resbalones, terrenos irregulares, cambios climáticos, agotamiento físico, contacto con flora o fauna y otros imprevistos propios del entorno natural. Declaro que evaluaré mi condición física, informaré oportunamente cualquier situación relevante para mi participación y seguiré las instrucciones de la organización y del personal encargado. Me comprometo a permanecer en los recorridos y zonas autorizadas, utilizar los elementos recomendados y no realizar conductas que pongan en riesgo mi integridad o la de otras personas. Entiendo que la organización adoptará medidas razonables de coordinación y prevención, pero que no es posible eliminar todos los riesgos propios de estas actividades. En el marco permitido por la legislación colombiana, acepto los riesgos inherentes y exonero a organizadores, guías y colaboradores por daños derivados de riesgos propios de la actividad, hechos imprevisibles, fuerza mayor o conductas atribuibles a mi propio incumplimiento, sin que esta aceptación elimine responsabilidades que legalmente no puedan excluirse ni cubra actuaciones dolosas o gravemente culposas. Confirmo que he leído y comprendido este documento.</p></details>
+      <label class="check-row"><input type="checkbox" name="accept_waiver" required><span>He leído, entiendo y acepto la exoneración de responsabilidad y los riesgos de la actividad. *</span></label>
+      <details><summary>Autorización opcional de uso de imagen</summary><p>Si autorizas, permites que la organización utilice fotografías o videos en los que aparezcas para divulgar y documentar el evento en redes sociales y medios digitales de Parchados Bogotá y comunidades aliadas. Esta autorización es opcional y no condiciona tu inscripción.</p></details>
+      <label class="check-row"><input type="checkbox" name="accept_image"><span>Autorizo el uso de mi imagen con fines informativos y promocionales (opcional).</span></label>
+    </div>
+    <div class="form-notice" id="formNotice" role="status"></div>
+    <button class="btn btn-primary submit-btn" id="submitButton" type="submit">ENVIAR MI INSCRIPCIÓN</button>
+    <p class="privacy-note">Tu información y comprobante no serán visibles públicamente. El contador de registros se actualizará únicamente cuando el sistema guarde correctamente tu inscripción.</p>
+  </form>
+</section>
+
+<section class="section donate-section" id="donar">
+  <div><span class="eyebrow">TAMBIÉN PUEDES SUMARTE</span><h2>Una sonrisa también empieza <em>con tu aporte.</em></h2><p>Puedes apoyar la iniciativa con una donación económica o llevando un juguete nuevo o usado en buen estado.</p></div>
+  <a class="btn btn-light" href="#inscripcion">DONAR AL INSCRIBIRME</a>
+</section>
+
+<section class="section faq-section" id="faq">
+  <div class="section-heading"><span class="eyebrow orange">RESOLVAMOS TUS DUDAS</span><h2>Preguntas <em>frecuentes.</em></h2></div>
+  <div id="faqList">
+    <details><summary>¿Cuánto cuesta participar?</summary><p>El valor de inscripción es de $25.000 COP.</p></details>
+    <details><summary>¿Necesito experiencia en Trail Running?</summary><p>No. Puedes seleccionar la actividad que mejor se adapte a ti y tu experiencia.</p></details>
+    <details><summary>¿Puedo participar solamente en zumba o meditación?</summary><p>Sí. Selecciona la actividad correspondiente en el formulario.</p></details>
+    <details><summary>¿Cómo realizo mi inscripción?</summary><p>Completa el formulario, adjunta el comprobante de pago y acepta los documentos requeridos.</p></details>
+    <details><summary>¿Cómo sé si mi pago fue confirmado?</summary><p>Tu registro se recibe primero como pendiente. La organización revisará el comprobante y actualizará el estado.</p></details>
+    <details><summary>¿Puedo realizar una donación adicional?</summary><p>Sí. Puedes añadir un aporte voluntario durante la inscripción.</p></details>
+    <details><summary>¿Puedo donar juguetes sin participar?</summary><p>Comunícate con la organización para coordinar la entrega.</p></details>
+    <details><summary>¿Dónde se entregarán los juguetes?</summary><p>La organización informará los detalles de la entrega a través de sus canales oficiales.</p></details>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div><strong>PARCHADOS BOGOTÁ 🧡</strong><p>Juntos hacia lo alto.</p></div>
+  <div class="footer-links"><a href="https://www.instagram.com/parchadosbogota/" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/573202345522" target="_blank" rel="noopener">WhatsApp</a><a href="#inicio">Volver arriba ↑</a></div>
+  <small>Trail por una Sonrisa 2026 · Iniciativa deportiva y solidaria.</small>
+</footer>
+
+<div class="modal" id="successModal" aria-hidden="true"><div class="modal-card"><div class="success-icon">✓</div><h2>¡Tu inscripción fue recibida!</h2><p>Gracias por sumarte a Trail por una Sonrisa.</p><p>Tu código de inscripción es:</p><strong id="registrationCode" class="registration-code"></strong><p>Tu comprobante será revisado por la organización. Cuando el pago sea validado, recibirás la confirmación definitiva.</p><button class="btn btn-primary" id="closeModal">ENTENDIDO</button></div></div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
