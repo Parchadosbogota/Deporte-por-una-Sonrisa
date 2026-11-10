@@ -170,7 +170,7 @@
   // CUENTA REGRESIVA
   function countdown() {
     const target = new Date(
-      cfg.EVENT_DATE || '2026-12-13T07:00:00-05:00'
+      cfg.EVENT_DATE || '2026-12-13T06:00:00-05:00'
     ).getTime();
 
     const diff = target - Date.now();
