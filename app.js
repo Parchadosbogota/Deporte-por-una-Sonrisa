@@ -387,15 +387,24 @@
       }
 
     } catch (e) {
-      console.warn('Datos públicos:', e.message);
-      // No inventar cifras: informar al visitante que no fue posible consultar.
+      console.error('ERROR AL CARGAR DATOS:', e);
+
+      const errorMessage = e?.message || String(e);
+
       ['statRegistered','statConfirmed','statCommunities','statMoney','statToys','statExtra']
-        .forEach(id => { if ($(id) && $(id).textContent.trim() === '—') $(id).textContent = 'Sin conexión'; });
+        .forEach(id => {
+          if ($(id)) $(id).textContent = 'Error de conexión';
+        });
+
       const grid = $('communityGrid');
-      if (grid && !grid.querySelector('.community-item')) {
-        grid.textContent = 'No pudimos cargar las comunidades. Revisa tu conexión e intenta actualizar.';
+
+      if (grid) {
+        grid.textContent = 'Detalle del error: ' + errorMessage;
       }
+
+      console.error('Detalle del error:', errorMessage);
     }
+
   }
 
   // FORMULARIO DE INSCRIPCIÓN
