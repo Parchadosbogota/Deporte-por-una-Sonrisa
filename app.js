@@ -23,49 +23,63 @@
       endpoint.endsWith('/exec');
   }
 
-  // CONSULTAR INFORMACIÓN DE GOOGLE APPS SCRIPT
-  function getOnce(action) {
-    return new Promise((resolve, reject) => {
-      if (!configured()) {
-        return reject(Error('La conexión con Google Apps Script aún no está configurada.'));
+  // CONSULTAR INFORMACIÓN DE GOOGLE APPS SCRIPT MEDIANTE IFRAME
+function getOnce(action) {
+  return new Promise((resolve, reject) => {
+    if (!configured()) {
+      return reject(
+        Error('La conexión con Google Apps Script no está configurada.')
+      );
+    }
+
+    const iframe = document.createElement('iframe');
+
+    iframe.style.display = 'none';
+    iframe.setAttribute('aria-hidden', 'true');
+
+    const timer = setTimeout(() => {
+      cleanup();
+      reject(Error('Tiempo de espera agotado al consultar Apps Script.'));
+    }, 30000);
+
+    function cleanup() {
+      clearTimeout(timer);
+      window.removeEventListener('message', handleMessage);
+      iframe.remove();
+    }
+
+    function handleMessage(event) {
+      const message = event.data;
+
+      if (message?.type !== 'TPS_GAS_PUBLIC_DATA') return;
+
+      cleanup();
+
+      const data = message.result;
+
+      if (data?.ok) {
+        resolve(data);
+      } else {
+        reject(
+          Error(data?.error || 'No fue posible consultar los datos.')
+        );
       }
+    }
 
-      const cb = 'tpscb_' + Date.now() + '_' +
-        Math.random().toString(36).slice(2);
+    window.addEventListener('message', handleMessage);
 
-      const script = document.createElement('script');
+    iframe.onerror = () => {
+      cleanup();
+      reject(Error('No se pudo cargar la consulta de Apps Script.'));
+    };
 
-      const timer = setTimeout(() => {
-        cleanup();
-        reject(Error('Tiempo de espera agotado al consultar el servidor.'));
-      }, 20000);
+    iframe.src = endpoint +
+      '?action=' + encodeURIComponent(action) +
+      '&transport=iframe&_=' + Date.now();
 
-      function cleanup() {
-        clearTimeout(timer);
-        delete window[cb];
-        script.remove();
-      }
-
-      window[cb] = data => {
-        cleanup();
-
-        data && data.ok
-          ? resolve(data)
-          : reject(Error(data?.error || 'No fue posible consultar los datos.'));
-      };
-
-      script.onerror = () => {
-        cleanup();
-        reject(Error('No se pudo conectar con Google Apps Script.'));
-      };
-
-      script.src = endpoint +
-        '?action=' + encodeURIComponent(action) +
-        '&callback=' + cb + '&_=' + Date.now();
-
-      document.body.append(script);
-    });
-  }
+    document.body.appendChild(iframe);
+  });
+}
 
   // Reintentar consultas públicas ante bloqueos temporales en redes móviles.
   async function get(action) {
