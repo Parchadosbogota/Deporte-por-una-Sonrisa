@@ -24,7 +24,7 @@
   }
 
   // CONSULTAR INFORMACIÓN DE GOOGLE APPS SCRIPT
-  function get(action) {
+  function getOnce(action) {
     return new Promise((resolve, reject) => {
       if (!configured()) {
         return reject(Error('La conexión con Google Apps Script aún no está configurada.'));
@@ -61,10 +61,23 @@
 
       script.src = endpoint +
         '?action=' + encodeURIComponent(action) +
-        '&callback=' + cb;
+        '&callback=' + cb + '&_=' + Date.now();
 
       document.body.append(script);
     });
+  }
+
+  // Reintentar consultas públicas ante bloqueos temporales en redes móviles.
+  async function get(action) {
+    let lastError;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try { return await getOnce(action); }
+      catch (err) {
+        lastError = err;
+        if (attempt < 2) await new Promise(r => setTimeout(r, 1200 * (attempt + 1)));
+      }
+    }
+    throw lastError;
   }
 
   // ENVIAR INFORMACIÓN A GOOGLE APPS SCRIPT
@@ -375,6 +388,13 @@
 
     } catch (e) {
       console.warn('Datos públicos:', e.message);
+      // No inventar cifras: informar al visitante que no fue posible consultar.
+      ['statRegistered','statConfirmed','statCommunities','statMoney','statToys','statExtra']
+        .forEach(id => { if ($(id) && $(id).textContent.trim() === '—') $(id).textContent = 'Sin conexión'; });
+      const grid = $('communityGrid');
+      if (grid && !grid.querySelector('.community-item')) {
+        grid.textContent = 'No pudimos cargar las comunidades. Revisa tu conexión e intenta actualizar.';
+      }
     }
   }
 
