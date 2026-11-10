@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -12,11 +13,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="#inicio"><span class="brand-mark">🧡</span><span>PARCHADOS <small>BOGOTÁ</small></span></a>
+  <a href="#inicio" class="brand-logo">
+  <img
+    src="img/logo-parchados.png"
+    alt="Parchados Bogotá"
+    class="brand-image"
+  >
+
+  <span class="brand-heart" aria-label="Corazón rojo">❤️</span>
+</a>
   <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
   <nav id="mainNav">
     <a href="#evento">El evento</a><a href="#actividades">Actividades</a><a href="#comunidades">Comunidades</a>
@@ -29,9 +38,22 @@
   <div class="hero-shade"></div>
   <div class="hero-content">
     <span class="eyebrow">PARCHADOS BOGOTÁ + COMUNIDADES ALIADAS</span>
-    <h1>TRAIL POR<br><em>UNA SONRISA</em></h1>
-    <p class="hero-tagline">Una carrera, muchas comunidades y cientos de sonrisas.</p>
-    <div class="event-pills"><span>📅 Domingo 13 de diciembre de 2026</span><span>📍 Cerros Orientales · Calle 153</span></div>
+    <h1>DEPORTE POR<br><em>UNA SONRISA</em></h1>
+    <p class="hero-tagline">Tres experiencias, diferentes comunidades y una misma causa</p>
+    <div class="event-pills"><span>📅 Domingo 13 de diciembre de 2026</span><span><a 
+  href="https://maps.app.goo.gl/niQhL4ymUJQnbpXP7"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="event-location"
+>
+  📍 Punto de encuentro: Cl. 163a #5b2, Bogotá
+</a>
+<p class="event-location-detail">
+  ⏰ Hora: 6:00 a. m.
+</p>
+<p class="event-location-detail">
+  🌄 Actividad en la sima Cerros Orientales de Bogotá.
+</p></span></div>
     <p class="hero-copy">Una jornada de deporte, naturaleza, integración y solidaridad para llevar alegría a muchos niños esta Navidad.</p>
     <div class="hero-actions"><a class="btn btn-primary" href="#inscripcion">INSCRÍBETE AQUÍ</a><a class="btn btn-light" href="#donar">QUIERO DONAR</a></div>
     <div class="countdown" id="countdown" aria-live="polite">Cargando cuenta regresiva…</div>
@@ -40,15 +62,41 @@
 
 <section class="section intro" id="evento">
   <div class="section-heading"><span class="eyebrow orange">UNA CAUSA QUE NOS UNE</span><h2>El deporte también puede <em>regalar sonrisas.</em></h2></div>
-  <p class="lead">Este diciembre queremos unir diferentes comunidades a través del deporte, la naturaleza y la solidaridad.</p>
-  <p>Nos encontraremos en los Cerros Orientales de Bogotá para compartir una jornada de actividad física, bienestar y diversión, mientras trabajamos juntos por una causa especial: llevar alegría a muchos niños esta Navidad.</p>
-  <p>No importa si eres corredor, senderista, amante del baile o simplemente quieres apoyar una buena causa. ¡Todos tenemos un lugar en este encuentro!</p>
+  <p class="lead"> Este diciembre queremos unir diferentes comunidades a través del deporte,
+    la naturaleza y la solidaridad. 🧡💛
+  </p>
+
+  <p>
+    Nos encontraremos en la <strong>Plazoleta de la Mariposa de Usaquén</strong>,
+    desde donde nos desplazaremos en transporte hasta una planicie de los
+    <strong>Cerros Orientales de Bogotá</strong>.
+  </p>
+
+  <p>
+    Allí compartiremos una jornada de aproximadamente <strong>3 horas</strong>,
+    con tres actividades que se desarrollarán simultáneamente:
+    <strong>Trail Running, Zumba y Meditación</strong>. Cada una tendrá su propio
+    espacio, creando una experiencia para disfrutar del movimiento, el bienestar
+    y la conexión con la naturaleza.
+  </p>
+
+  <p>
+    No importa si eres corredor, amante del baile, disfrutas de la tranquilidad
+    o simplemente quieres vivir algo diferente. ¡Hay un espacio para ti!
+  </p>
+
+  <p>
+    Porque esta vez nos mueve algo más grande que el deporte:
+    <strong>unir comunidades y sumar sonrisas para llevar alegría a muchos niños
+    esta Navidad.</strong> 🎄
+  </p>
 </section>
 
 <section class="section section-tint" id="actividades">
   <div class="section-heading"><span class="eyebrow orange">MUÉVETE A TU MANERA</span><h2>Una jornada, <em>muchas formas de vivirla.</em></h2></div>
   <div class="card-grid">
-    <article class="activity-card"><div class="activity-icon">🏃</div><h3>ENTRENAMIENTO TRAIL RUNNING</h3><p>Recorrido deportivo por los senderos de los Cerros Orientales.</p></article>
+    <article class="activity-card"><div class="activity-icon">🏃</div><h3>TRAIL RUNNING</h3><p>Recorrido deportivo por los senderos de los Cerros Orientales.</p></article>
+    <article class="activity-card"><div class="activity-icon">🥾</div><h3>SENDERISMO</h3><p>Una alternativa para quienes prefieren disfrutar de la montaña caminando.</p></article>
     <article class="activity-card"><div class="activity-icon">💃</div><h3>ZUMBA</h3><p>Clase grupal para activar el cuerpo, bailar y compartir antes del entrenamiento.</p></article>
     <article class="activity-card"><div class="activity-icon">🧘</div><h3>MEDITACIÓN</h3><p>Espacio de relajación y conexión con la naturaleza, simultáneo al entrenamiento.</p></article>
   </div>
@@ -76,56 +124,150 @@
     <div class="stat"><strong id="statToys">—</strong><span>Juguetes verificados</span></div>
     <div class="stat"><strong id="statExtra">—</strong><span>Aportes adicionales</span></div>
   </div>
-  <p class="transparency-note">Las cifras públicas se actualizan con información registrada y verificada por la organización. No publicamos datos personales ni información bancaria.</p>
-</section>
+      <p class="transparency-note">Las cifras públicas se actualizan con información registrada y verificada por la organización. No publicamos datos personales ni información bancaria.</p>
+    </section>
 
-<section class="section registration-section" id="inscripcion">
-  <div class="section-heading"><span class="eyebrow orange">HAZ PARTE DE ESTA HISTORIA</span><h2>Inscríbete a <em>Trail por una Sonrisa.</em></h2></div>
-  <div class="form-intro"><strong>Valor de inscripción: $25.000 COP</strong><p>Completa todos los campos y adjunta tu comprobante. Tu registro quedará recibido cuando el sistema confirme que guardó correctamente la información.</p></div>
-  <form id="registrationForm" class="registration-form">
-    <h3> A. Datos personales</h3>
-    <div class="form-grid">
-      <label>Nombres *<input name="first_name" required maxlength="80" autocomplete="given-name"></label>
-      <label>Apellidos *<input name="last_name" required maxlength="80" autocomplete="family-name"></label>
-      <label>Tipo de documento *<select name="document_type" required><option value="">Selecciona</option><option>Cédula de ciudadanía</option><option>Tarjeta de identidad</option><option>Pasaporte</option><option>Cédula de extranjería</option><option>Otro</option></select></label>
-      <label>Número de documento *<input name="document_number" required maxlength="30" autocomplete="off"></label>
-      <label>Edad *<input name="age" type="number" min="1" max="110" required></label>
-      <label>Celular *<input name="phone" type="tel" required maxlength="25" autocomplete="tel"></label>
+    <section class="section registration-section" id="inscripcion">
+      <div class="section-heading"><span class="eyebrow orange">HAZ PARTE DE ESTA HISTORIA</span><h2>Inscríbete a <em>DEPORTE POR UNA SONRISA.</em></h2></div>
+      <div class="form-intro"><strong>Valor de inscripción: $20.000 COP</strong><p>Completa todos los campos y adjunta tu comprobante. Tu registro quedará recibido cuando el sistema confirme que guardó correctamente la información.</p></div>
+      <form id="registrationForm" class="registration-form">
+        <h3> A. Datos personales</h3>
+        <div class="form-grid">
+    <label>Nombres *
+      <input
+        name="first_name"
+        required
+        maxlength="80"
+        autocomplete="given-name"
+        oninput="this.value=this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]/g,'')"
+      >
+    </label>
+
+    <label>Apellidos *
+      <input
+        name="last_name"
+        required
+        maxlength="80"
+        autocomplete="family-name"
+        oninput="this.value=this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]/g,'')"
+      >
+    </label>
+    <label>Tipo de documento *
+      <select name="document_type" required>
+        <option value="">Selecciona</option>
+        <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+        <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+        <option value="Cédula de extranjería">Cédula de extranjería</option>
+        <option value="Pasaporte">Pasaporte</option>
+      </select>
+    </label>
+    <label>Número de documento *
+      <input
+        name="document_number"
+        type="text"
+        inputmode="numeric"
+        required
+        maxlength="30"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+      >
+    </label>
+
+    <label>Fecha de nacimiento *
+      <input
+        name="birth_date"
+        id="birthDate"
+        type="date"
+        required
+      >
+    </label>
+
+    <input type="hidden" name="age" id="calculatedAge">
+
+    <label>Celular *
+      <input
+        name="phone"
+        type="tel"
+        inputmode="numeric"
+        required
+        maxlength="15"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+      >
+    </label>
       <label>Correo electrónico *<input name="email" type="email" required maxlength="150" autocomplete="email"></label>
       <label>Ciudad *<input name="city" required maxlength="80" value="Bogotá"></label>
     </div>
     <h3>B. Información de participación</h3>
     <div class="form-grid">
-      <label>Comunidad a la que perteneces<select name="community_id" id="communitySelect"><option value="">PARCHADOS</option><option value="">PARCEROS RUNNING</option><option value="">STROMRUN</option><option value="">BOGOTA RUNNING</option><option value="">RISEUP</option><option value="">Ninguna / Independiente</option></select></label>
-      <label>Actividad en la que deseas participar *<select name="activity" required><option value="">Selecciona</option><option>Entrenamiento Trail Running</option><option>Meditación</option><option>Zumba y jornada recreativa</option><option>Toda la jornada</option></select></label>
+      <label>Comunidad a la que perteneces<select name="community_id" id="communitySelect"><option value="">Ninguna / Independiente</option></select></label>
+      <label>Actividad en la que mas deseas participar *<select name="activity" required><option value="">Selecciona</option><option>Trail Running</option><option>Meditación</option><option>Zumba</option></select></label>
       <label>¿Cómo te enteraste del evento?<select name="discovery_source"><option value="">Selecciona</option><option>Instagram</option><option>TikTok</option><option>WhatsApp</option><option>Amigos o familiares</option><option>Comunidad aliada</option><option>Otro</option></select></label>
       <label>Experiencia en deporte o montaña<select name="experience"><option value="">Selecciona</option><option>Ninguna / principiante</option><option>Básica</option><option>Intermedia</option><option>Avanzada</option></select></label>
     </div>
     <h3>C. Contacto de emergencia</h3>
     <div class="form-grid">
-      <label>Nombre del contacto *<input name="emergency_name" required maxlength="120"></label>
-      <label>Celular del contacto *<input name="emergency_phone" type="tel" required maxlength="25"></label>
+    <label>Nombre del contacto *
+      <input
+        name="emergency_name"
+        required
+        maxlength="120"
+        oninput="this.value=this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s'-]/g,'')"
+      >
+    </label>
+
+    <label>Celular del contacto *
+      <input
+        name="emergency_phone"
+        type="tel"
+        inputmode="numeric"
+        required
+        maxlength="15"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+      >
+    </label>
       <label>Parentesco o relación *<input name="emergency_relationship" required maxlength="60"></label>
     </div>
     <h3>D. Información económica</h3>
     <div class="form-grid">
-      <label>Valor de inscripción<input value="$25.000 COP" readonly></label>
+      <label>Valor de inscripción<input value="$20.000 COP" readonly></label>
       <label>Aporte económico adicional<select name="extra_donation" id="extraDonation"><option value="0">No deseo realizar un aporte adicional</option><option value="5000">$5.000 adicionales</option><option value="10000">$10.000 adicionales</option><option value="other">Otro valor</option></select></label>
       <label id="otherDonationWrap" class="hidden">Otro valor (COP)<input name="other_donation" id="otherDonation" type="number" min="1000" step="1000"></label>
     </div>
     <h3>E. Donación de juguetes</h3>
     <label>¿Deseas llevar un juguete para donar?<select name="toy_donation"><option value="No">No</option><option value="Sí, juguete nuevo">Sí, juguete nuevo</option><option value="Sí, juguete usado en buen estado">Sí, juguete usado en buen estado</option></select></label>
+    <div class="payment-instructions">
+    <h3>💳 ¿Cómo realizar tu pago?</h3>
+
+    <p>
+      Para completar tu inscripción, realiza una transferencia
+      por el valor correspondiente a través de <strong>Llave Bre-B</strong>.
+    </p>
+
+    <div class="payment-key">
+      <span>Llave de pago</span>
+      <strong>1024521184</strong>
+      <small>Copia esta llave para realizar tu transferencia.</small>
+    </div>
+
+    <p>
+      <strong>Titular:</strong> Cristian Camilo Guzmán Morales
+    </p>
+
+    <p class="payment-warning">
+      ⚠️ Después de realizar la transferencia, adjunta el comprobante
+      de pago en el siguiente apartado para completar tu inscripción.
+    </p>
+  </div>
     <h3>F. Comprobante de pago <span class="required-label">OBLIGATORIO</span></h3>
     <p class="help-text">Adjunta una imagen JPG, JPEG o PNG, o un archivo PDF. Tamaño máximo: 5 MB. El archivo se almacenará de forma privada.</p>
     <label class="file-picker">Seleccionar comprobante *<input id="receipt" name="receipt" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" required><span id="fileName">Ningún archivo seleccionado</span></label>
     <div id="receiptPreview" class="receipt-preview"></div>
     <h3>G. Aceptaciones obligatorias</h3>
     <div class="legal-box">
-      <details><summary>Leer términos y condiciones</summary><p>La inscripción corresponde a la participación en Trail por una Sonrisa 2026, el domingo 13 de diciembre de 2026, en los Cerros Orientales de Bogotá, sector calle 153 hacia el Mirador El Chuscal. El valor de inscripción es de $25.000 COP. La organización podrá comunicar instrucciones logísticas y ajustes necesarios por canales oficiales. El participante se compromete a suministrar información veraz y seguir las indicaciones del equipo organizador.</p></details>
+      <details><summary>Leer términos y condiciones</summary><p>La inscripción corresponde a la participación en Trail por una Sonrisa 2026, el domingo 13 de diciembre de 2026, en los Cerros Orientales de Bogotá, sector calle 153 hacia el Mirador El Chuscal. El valor de inscripción es de $20.000 COP. La organización podrá comunicar instrucciones logísticas y ajustes necesarios por canales oficiales. El participante se compromete a suministrar información veraz y seguir las indicaciones del equipo organizador.</p></details>
       <label class="check-row"><input type="checkbox" name="accept_terms" required><span>He leído y acepto los términos y condiciones. *</span></label>
       <details><summary>Leer autorización de tratamiento de datos personales</summary><p>Autorizo a Parchados Bogotá y a la organización de Trail por una Sonrisa 2026 a recolectar, almacenar y utilizar mis datos para gestionar la inscripción, verificar el pago, coordinar la actividad, atender situaciones logísticas y comunicar información relacionada con el evento, conforme a la Ley 1581 de 2012 y normas reglamentarias. Podré ejercer mis derechos como titular mediante los canales de contacto de la organización.</p></details>
       <label class="check-row"><input type="checkbox" name="accept_data" required><span>Autorizo el tratamiento de mis datos personales. *</span></label>
-      <details><summary>Leer exoneración de responsabilidad y aceptación de riesgos</summary><p>Declaro que participo voluntariamente y que comprendo que el trail running y las actividades al aire libre implican riesgos inherentes, entre ellos caídas, resbalones, terrenos irregulares, cambios climáticos, agotamiento físico, contacto con flora o fauna y otros imprevistos propios del entorno natural. Declaro que evaluaré mi condición física, informaré oportunamente cualquier situación relevante para mi participación y seguiré las instrucciones de la organización y del personal encargado. Me comprometo a permanecer en los recorridos y zonas autorizadas, utilizar los elementos recomendados y no realizar conductas que pongan en riesgo mi integridad o la de otras personas. Entiendo que la organización adoptará medidas razonables de coordinación y prevención, pero que no es posible eliminar todos los riesgos propios de estas actividades. En el marco permitido por la legislación colombiana, acepto los riesgos inherentes y exonero a organizadores, guías y colaboradores por daños derivados de riesgos propios de la actividad, hechos imprevisibles, fuerza mayor o conductas atribuibles a mi propio incumplimiento, sin que esta aceptación elimine responsabilidades que legalmente no puedan excluirse ni cubra actuaciones dolosas o gravemente culposas. Confirmo que he leído y comprendido este documento.</p></details>
+      <details><summary>Leer exoneración de responsabilidad y aceptación de riesgos</summary><p>Declaro que participo voluntariamente y que comprendo que el trail running, zumba y las actividades al aire libre implican riesgos inherentes, entre ellos caídas, resbalones, terrenos irregulares, cambios climáticos, agotamiento físico, contacto con flora o fauna y otros imprevistos propios del entorno natural. Declaro que evaluaré mi condición física, informaré oportunamente cualquier situación relevante para mi participación y seguiré las instrucciones de la organización y del personal encargado. Me comprometo a permanecer en los recorridos y zonas autorizadas, utilizar los elementos recomendados y no realizar conductas que pongan en riesgo mi integridad o la de otras personas. Entiendo que la organización adoptará medidas razonables de coordinación y prevención, pero que no es posible eliminar todos los riesgos propios de estas actividades. En el marco permitido por la legislación colombiana, acepto los riesgos inherentes y exonero a organizadores, guías y colaboradores por daños derivados de riesgos propios de la actividad, hechos imprevisibles, fuerza mayor o conductas atribuibles a mi propio incumplimiento, sin que esta aceptación elimine responsabilidades que legalmente no puedan excluirse ni cubra actuaciones dolosas o gravemente culposas. Confirmo que he leído y comprendido este documento.</p></details>
       <label class="check-row"><input type="checkbox" name="accept_waiver" required><span>He leído, entiendo y acepto la exoneración de responsabilidad y los riesgos de la actividad. *</span></label>
       <details><summary>Autorización opcional de uso de imagen</summary><p>Si autorizas, permites que la organización utilice fotografías o videos en los que aparezcas para divulgar y documentar el evento en redes sociales y medios digitales de Parchados Bogotá y comunidades aliadas. Esta autorización es opcional y no condiciona tu inscripción.</p></details>
       <label class="check-row"><input type="checkbox" name="accept_image"><span>Autorizo el uso de mi imagen con fines informativos y promocionales (opcional).</span></label>
@@ -144,7 +286,7 @@
 <section class="section faq-section" id="faq">
   <div class="section-heading"><span class="eyebrow orange">RESOLVAMOS TUS DUDAS</span><h2>Preguntas <em>frecuentes.</em></h2></div>
   <div id="faqList">
-    <details><summary>¿Cuánto cuesta participar?</summary><p>El valor de inscripción es de $25.000 COP.</p></details>
+    <details><summary>¿Cuánto cuesta participar?</summary><p>El valor de inscripción es de $20.000 COP.</p></details>
     <details><summary>¿Necesito experiencia en Trail Running?</summary><p>No. Puedes seleccionar la actividad que mejor se adapte a ti y tu experiencia.</p></details>
     <details><summary>¿Puedo participar solamente en zumba o meditación?</summary><p>Sí. Selecciona la actividad correspondiente en el formulario.</p></details>
     <details><summary>¿Cómo realizo mi inscripción?</summary><p>Completa el formulario, adjunta el comprobante de pago y acepta los documentos requeridos.</p></details>
@@ -166,5 +308,51 @@
 
 <script src="config.js"></script>
 <script src="app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const birthDate = document.getElementById("birthDate");
+  const calculatedAge = document.getElementById("calculatedAge");
+
+  // Evitar fechas futuras
+  const today = new Date();
+  const localToday = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0")
+  ].join("-");
+  birthDate.max = localToday;
+
+  birthDate.addEventListener("change", function () {
+    if (!birthDate.value) {
+      calculatedAge.value = "";
+      return;
+    }
+
+    const nacimiento = new Date(birthDate.value + "T00:00:00");
+    const hoy = new Date();
+
+    if (nacimiento > hoy) {
+      alert("La fecha de nacimiento no puede ser futura.");
+      birthDate.value = "";
+      calculatedAge.value = "";
+      return;
+    }
+
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+
+    const noHaCumplido =
+      hoy.getMonth() < nacimiento.getMonth() ||
+      (hoy.getMonth() === nacimiento.getMonth() &&
+       hoy.getDate() < nacimiento.getDate());
+
+    if (noHaCumplido) {
+      edad--;
+    }
+
+    calculatedAge.value = edad;
+  });
+});
+</script>
 </body>
 </html>
+
